@@ -1,4 +1,4 @@
-# savage-dl
+# Savage-DL
 DOWNLOAD EVERYTHING! - Google Drive, Mediafire, and Dropbox Links Supported
 
 ## Supported Links
