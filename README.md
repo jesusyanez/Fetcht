@@ -1,5 +1,5 @@
 # FinesseDL
-DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Links
+DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Downloader
 
 - Python 3 compatible
 - Supports all Operating Systems
