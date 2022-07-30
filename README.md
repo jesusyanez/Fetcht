@@ -3,7 +3,7 @@ DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Links
 
 - Python 3 compatible
 - Supports all Operating Systems
-- NO API KEYS
+- NO API KEYS / CREDENTIALS
 - Auto Extraction
   - .zip
   - .rar
