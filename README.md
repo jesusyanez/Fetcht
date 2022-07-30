@@ -33,19 +33,18 @@ MediaFire
 import lootdl
 
 # lootdl.download(url, output_directory)
-lootdl.get('https://drive.google.com/file/d/fs4lf234ks1/view?usp=sharing', './Downloads')
-
+lootdl.get('URL', './')
 ```
 #### List Usage
 ```python3
 import lootdl
 
-list = ['Dropbox_URL', 'MediaFire_URL', 'Google_Drive_URL']
-output_folder = './Downloads' #Make sure output directory exists before running
+#Make sure output directory exists before running
+output_folder = './Downloads/'
+list = ['URL1', 'URL2', 'URL3']
 
 for url in list:
-    lootdl.get(url, output_folder)
-
+    lootdl.get(url, output_directory)
 ```
 
 ## Roadmap
