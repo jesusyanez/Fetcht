@@ -1,40 +1,60 @@
-# FinesseDL
-DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Downloader
+# LootDL
+DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Links
 
 - Python 3 compatible
 - Supports all Operating Systems
-- NO API Keys Required
+- NO API KEYS REQUIRED
 - Auto Extraction
   - .zip
-  - .rar ([7z installation required](https://www.7-zip.org/download.html))
-- Autonames downloads
+  - .rar 
+- Auto File Naming
+
+### Supported Link Types
+```txt
+Dropbox
+
+'https://www.dropbox.com/s/.../example.zip?dl=0'
+'https://www.dropbox.com/s/.../example.zip?dl=1'
+'https://www.dropbox.com/sh/.../...?dl=0'
+'https://www.dropbox.com/sh/.../...?dl=1'  
+
+Google Drive
+
+'https://drive.google.com/drive/folders/...?usp=sharing'
+'https://drive.google.com/file/d/.../view?usp=sharing'
+
+MediaFire
+
+'https://www.mediafire.com/file/.../example.zip/file'
+```
 
 ### Usage
 ```python3
-import finessedl as fdl
+import lootdl
 
-# finessedl.download(url, output_folder)
-fdl.get('drive.google.com/fsdlfks', './Downloads')
+# lootdl.download(url, output_directory)
+lootdl.get('drive.google.com/fsdlfks', './Downloads')
 
 ```
 #### List Usage
 ```python3
-import finessedl as fdl
+import lootdl
 
 dl_list = ['drive.google.com/fsdlfks', 'mediafire.com/file/fsjkldfls', 'dropbox.com/s/fjklsdfjl434']
-output_folder = './Downloads'
+output_folder = './Downloads' #Make sure output directory already exists before running
 
 for url in dl_list:
-    fdl.get(url, output_folder)
+    lootdl.get(url, output_folder)
 
 ```
 
-## Supported Links
+## Roadmap
 - [X] Google Drive
 - [X] Dropbox
-- [ ] MediaFire
+- [X] MediaFire
 - [ ] Mega
  
 ## Acknowledgments
-Scripts used:<br/>
-[gdrivedl](https://github.com/matthuisman/gdrivedl)
+Inspired by & uses:<br/>
+https://github.com/matthuisman/gdrivedl <br/>
+https://github.com/Juvenal-Yescas/mediafire-dl
