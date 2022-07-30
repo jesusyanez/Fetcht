@@ -32,19 +32,19 @@ MediaFire
 ```python3
 import lootdl
 
-# lootdl.download(url, output_directory)
-lootdl.get('URL', './')
+# lootdl.grab(url, directory)
+lootdl.grab('URL', './')
 ```
 ### In a list
 ```python3
 import lootdl
 
 #Make sure output directory exists before running
-output_folder = './Downloads/'
+directory = './Downloads/'
 list = ['URL1', 'URL2', 'URL3']
 
 for url in list:
-    lootdl.get(url, output_directory)
+    lootdl.grab(url, directory)
 ```
 
 ## Roadmap
