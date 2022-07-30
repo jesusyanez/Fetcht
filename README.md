@@ -3,7 +3,7 @@ DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Links
 
 - Python 3 compatible
 - Supports all Operating Systems
-- NO API KEYS REQUIRED
+- NO API KEYS
 - Auto Extraction
   - .zip
   - .rar
@@ -33,17 +33,17 @@ MediaFire
 import lootdl
 
 # lootdl.download(url, output_directory)
-lootdl.get('drive.google.com/fsdlfks', './Downloads')
+lootdl.get('https://drive.google.com/file/d/fs4lf234ks1/view?usp=sharing', './Downloads')
 
 ```
 #### List Usage
 ```python3
 import lootdl
 
-dl_list = ['drive.google.com/fsdlfks', 'mediafire.com/file/fsjkldfls', 'dropbox.com/s/fjklsdfjl434']
-output_folder = './Downloads' #Make sure output directory already exists before running
+list = ['Dropbox_URL', 'MediaFire_URL', 'Google_Drive_URL']
+output_folder = './Downloads' #Make sure output directory exists before running
 
-for url in dl_list:
+for url in list:
     lootdl.get(url, output_folder)
 
 ```
