@@ -6,7 +6,7 @@ DOWNLOAD EVERYTHING! - Google Drive, Dropbox, and MediaFire Links
 - NO API KEYS REQUIRED
 - Auto Extraction
   - .zip
-  - .rar 
+  - .rar
 - Auto File Naming
 
 ### Supported Link Types
