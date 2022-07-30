@@ -35,7 +35,7 @@ import lootdl
 # lootdl.download(url, output_directory)
 lootdl.get('URL', './')
 ```
-#### List Usage
+### In a list
 ```python3
 import lootdl
 
