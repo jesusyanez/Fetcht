@@ -2,12 +2,12 @@
 
 - Python 3 compatible
 - Supports all operating systems
-- No api keys / CREDENTIALS REQUIRED
+- No api keys or credentials required
 - Downloads from:
   - Google Drive
   - Dropbox
   - MediaFire
-- Automatically extracts folders
+- Automatically extracts downloads
   - .zip
   - .rar
 
