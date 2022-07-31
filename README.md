@@ -41,10 +41,10 @@ URL1 = 'https://drive.google.com/file/d/..../view?usp=sharing'
 URL2 = 'https://www.dropbox.com/sh/............/........?dl=0'
 URL3 = 'https://www.mediafire.com/file/...../........zip/file'
 
-bulk_list = [URL1, URL2, URL3]
+list = [URL1, URL2, URL3]
 directory = './Downloads/'
 
-for url in bulk_list:
+for url in list:
     aio.get(url, directory)
 ```
 
