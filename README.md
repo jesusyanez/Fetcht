@@ -2,9 +2,10 @@
 
 - Python 3 compatible
 - Supports all operating systems
-- No api keys or credentials required
-- Supports Google Drive, Dropbox, and Mediafire links
+- No api keys / credentials required
 - Automatically extracts .zip & .rar downloads
+- Supports share links from: Google Drive, Dropbox, and Mediafire links
+
 
 ## Usage
 ```python3
