@@ -4,7 +4,7 @@
 - Works on Windows & Linux
 - No API keys / credentials needed
 - Automatically names folders
-- Automatically extracts then deletes .zip & .rar files
+- Automatically extracts and then removes .zip & .rar files
 - Supports Google Drive, Dropbox, MediaFire, WeTransfer, and more coming soon
 
 ## Usage
