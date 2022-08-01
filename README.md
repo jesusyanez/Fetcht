@@ -3,15 +3,16 @@
 - Python 3 compatible
 - Supports all operating systems
 - No api keys / credentials required
+- Automatically names folders
 - Automatically extracts & deletes .zip & .rar files
 - Supports share links from: Google Drive, Dropbox, and MediaFire links
 
 
 ## Usage
 ```python3
-import aiodl as aio
+import aiodl
 
-aio.get('https://drive.google.com/file/d/..../view?usp=sharing', './Downloads/')
+aiodl.download('https://drive.google.com/file/d/..../view?usp=sharing', './Downloads/')
 ```
 
 ## Supported Links
