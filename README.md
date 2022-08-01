@@ -2,7 +2,7 @@
 
 - Uses Python 3 
 - Works on Windows & Linux
-- No API keys / credentials required
+- No API keys / credentials needed
 - Automatically names folders
 - Automatically extracts then deletes .zip & .rar files
 - Supports Google Drive, Dropbox, MediaFire, WeTransfer, and more coming soon
@@ -14,6 +14,7 @@ import aiodl
 # aiodl.download(url, download location)
 aiodl.download('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
 ```
+Ensure the download location exists or it will cause issues.
 
 ## Download URL Formats
 ```txt
@@ -22,8 +23,8 @@ https://drive.google.com/drive/folders/...?usp=sharing
 https://drive.google.com/file/d/.../view?usp=sharing
 
 Dropbox
-https://www.dropbox.com/s/.../...?dl=0
-https://www.dropbox.com/sh/.../...?dl=0
+https://www.dropbox.com/s/.../...?dl=0(1)
+https://www.dropbox.com/sh/.../...?dl=0(1)
 
 MediaFire
 https://www.mediafire.com/file/.../.../file
