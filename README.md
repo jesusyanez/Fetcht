@@ -12,16 +12,6 @@ import aiodl as aio
 
 aio.get('https://drive.google.com/file/d/..../view?usp=sharing', './Downloads/')
 ```
-### Bulk Downloads
-```python3
-import aiodl as aio
-
-list = [URL1, URL2, URL3]
-directory = './Downloads/'
-
-for url in list:
-    aio.get(url, directory)
-```
 
 ## Supported Links
 ```txt
