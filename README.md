@@ -4,9 +4,8 @@
 - Supports all operating systems
 - No api keys / credentials required
 - Automatically names folders
-- Automatically extracts & deletes .zip & .rar files
-- Supports share links from: Google Drive, Dropbox, and MediaFire links
-
+- Automatically extracts then deletes .zip & .rar files
+- Supports share links from: Google Drive, Dropbox, and MediaFire
 
 ## Usage
 ```python3
