@@ -14,7 +14,7 @@ import aiodl
 # aiodl.download(url, download location)
 aiodl.download('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
 ```
-Ensure the download location exists and ends with a "/" or it will cause issues.
+Ensure the download location exists and ends with a "/" or it will cause issues. You can use "./" to download to the working directory.
 
 ## Download URL Formats
 ```txt
