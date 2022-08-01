@@ -3,8 +3,8 @@
 - Python 3 compatible
 - Supports all operating systems
 - No api keys / credentials required
-- Automatically extracts .zip & .rar downloads
-- Supports share links from: Google Drive, Dropbox, and Mediafire links
+- Automatically extracts & deletes .zip & .rar files
+- Supports share links from: Google Drive, Dropbox, and MediaFire links
 
 
 ## Usage
@@ -35,6 +35,7 @@ https://www.mediafire.com/file/...../........zip/file
 - [X] Google Drive
 - [X] Dropbox
 - [X] MediaFire
+- [ ] WeTransfer
 - [ ] Mega
  
 ## Acknowledgments
