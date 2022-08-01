@@ -1,14 +1,16 @@
 # This file is an All-In-One module for downloading from cloud storage services
-# Supports share links from Google Drive, Dropbox, and MediaFire
+# Supports share links from Google Drive, Dropbox, MediaFire, and WeTransfer
 # Does not use any APIs
-# Uses a modified version of "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
-# Uses a modified version of "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
+# Uses modified version of the following scripts:
+#   "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
+#   "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
+#   "transferwee" by iamleot - https://github.com/iamleot/transferwee
 
 import gdrivedl
 import mediafiredl
+import wetransferdl
 import os
 import requests
-import pathlib
 import zipfile
 import patoolib
 from bs4 import BeautifulSoup
@@ -17,6 +19,7 @@ from bs4 import BeautifulSoup
 gdrive_url = 'drive.google.com'
 dropbox_url = 'dropbox.com'
 mediafire_url = 'mediafire.com'
+wetransfer_url = 'wetransfer.com'
 
 # Google drive folder link url downloader
 def download_folder(url, output_folder, filename=None):
@@ -44,8 +47,8 @@ def get_title_mf(url):
 
 # Detects file compression type
 def compression_type(file_name):
-    file_extension = pathlib.Path(file_name).suffix.lower()
-    return file_extension
+    ext = os.path.splitext(file_name)[-1].lower()
+    return ext
 
 # Uncompresses files and then deletes compressed folder
 def unzip(zipped_file, unzipped_file, directory):
@@ -110,6 +113,10 @@ def mf_download(url, directory):
     mediafiredl.download(url, temp_output, quiet=True)
     unzip(zip_name, output, directory)
 
+# Download from WeTransfer
+def wt_download(url, directory):
+    wetransferdl.download(url, directory, extract=True)
+
 # Detects url cloud service type and downloads it to a specific location
 def download(url, output_path):
     if gdrive_url in url:
@@ -118,3 +125,5 @@ def download(url, output_path):
         db_download(url, output_path)
     if mediafire_url in url:
         mf_download(url, output_path)
+    if wetransfer_url in url:
+        wt_download(url, output_path)
