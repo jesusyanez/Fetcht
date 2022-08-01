@@ -1,11 +1,11 @@
 # All-In-One (AIO) DL
 
-- Python 3 compatible
-- Supports all operating systems
+- Uses Python 3 
+- Works on Windows & Linux
 - No API keys / credentials required
 - Automatically names folders
 - Automatically extracts then deletes .zip & .rar files
-- Supports share links from: Google Drive, Dropbox, and MediaFire
+- Supports Google Drive, Dropbox, and MediaFire
 
 ## Usage
 ```python3
