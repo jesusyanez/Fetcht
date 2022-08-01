@@ -1,37 +1,53 @@
+# This file is an All-In-One module for downloading from cloud storage services
+# Supports share links from Google Drive, Dropbox, and MediaFire
+# Does not use any APIs
+# Uses a modified version of "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
+# Uses a modified version of "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
+
 import gdrivedl
+import mediafiredl
 import os
 import requests
 import pathlib
 import zipfile
 import patoolib
-import mediafireDL
 from bs4 import BeautifulSoup
 
+# define urls to filter cloud service
+gdrive_url = 'drive.google.com'
+dropbox_url = 'dropbox.com'
+mediafire_url = 'mediafire.com'
+
+# Google drive folder link url downloader
 def download_folder(url, output_folder, filename=None):
     dl = gdrivedl.GDriveDL(quiet=False, overwrite=False, mtimes=False)
     dl.process_url(url, output_folder, filename=None)
 
+# Google drive file link url downloader
 def download_file(url, output_folder, filename):
     dl = gdrivedl.GDriveDL(quiet=False, overwrite=False, mtimes=False)
     dl.process_url(url, output_folder, filename)
 
+# Gets file/folder title by webscraping 
 def get_title(url):
     reqs = requests.get(url)
     soup = BeautifulSoup(reqs.text, 'html.parser')
     for title in soup.find_all('title'):
-        return title.get_text() #[:-15]
+        return title.get_text()
 
+# Gets mediafire file/folder title by webscraping 
 def get_title_mf(url):
     reqs = requests.get(url)
     soup = BeautifulSoup(reqs.text, 'html.parser')
     temp_output = str(soup.find('div', {'class': 'filename'}).get_text())
     return temp_output
-    # output = temp_output[:-4]
 
+# Detects file compression type
 def compression_type(file_name):
     file_extension = pathlib.Path(file_name).suffix.lower()
     return file_extension
 
+# Uncompresses files and then deletes compressed folder
 def unzip(zipped_file, unzipped_file, directory):
     if compression_type(zipped_file) == '.zip':
         zip_path = directory + zipped_file
@@ -49,10 +65,7 @@ def unzip(zipped_file, unzipped_file, directory):
         os.remove(zip_path)
     return
 
-gdrive_url = 'drive.google.com'
-dropbox_url = 'dropbox.com'
-mediafire_url = 'mediafire.com'
-
+# Download from Google Drive
 def gd_download(url, directory):
     if 'folder' in url:
         output = get_title(url)[:-15]
@@ -68,6 +81,7 @@ def gd_download(url, directory):
     else: 
         print('The url: '+ url + ' is not supported, sorry.')
 
+# Download from Dropbox
 def db_download(url, directory):
     url = url[:-1] + '0'
     file_name = get_title(url)[:-21][10:]
@@ -87,14 +101,16 @@ def db_download(url, directory):
                 f.write(chunk)
     unzip(file_name, output, directory)
 
+# Download from MediaFire
 def mf_download(url, directory):
     zip_name = url[:-5].rsplit('/', 1)[-1]
     temp_output = directory + zip_name
     print('---> Downloading to: ' + temp_output)
     output = zip_name[:-4]
-    mediafireDL.download(url, temp_output, quiet=True)
+    mediafiredl.download(url, temp_output, quiet=True)
     unzip(zip_name, output, directory)
 
+# Detects url cloud service type and downloads it to a specific location
 def download(url, output_path):
     if gdrive_url in url:
         gd_download(url, output_path)

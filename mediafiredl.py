@@ -3,7 +3,6 @@ import re
 import shutil
 import sys
 import tempfile
-from tty import OSPEED
 import requests
 import os.path as osp
 import six
@@ -52,11 +51,6 @@ def download(url, output, quiet):
     if not quiet:
         print('Downloading...', file=sys.stderr)
         print('From:', url_origin, file=sys.stderr)
-        print(
-            'To:',
-            OSPEED.abspath(output) if output_is_path else output,
-            file=sys.stderr,
-        )
 
     if output_is_path:
         tmp_file = tempfile.mktemp(
