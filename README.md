@@ -1,10 +1,10 @@
 # All-In-One (AIO) DL
 
-- Works with Python 3 
-- Works on Windows & Linux
+- Python 3 
+- Works on all operating systems
 - No API keys / credentials needed
 - Downloads from Google Drive, Dropbox, Mediafire, and WeTransfer
-- Automatically extracts and deletes .zip & .rar files
+- Automatically extracts, then deletes .zip & .rar files
 
 ## Usage
 ```python3
