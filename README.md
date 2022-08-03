@@ -40,8 +40,3 @@ https://wetransfer.com/downloads/.../...
 - [X] WeTransfer
 - [ ] Mega
  
-## Acknowledgments
-Inspired by & uses modified versions of:<br/>
-https://github.com/matthuisman/gdrivedl <br/>
-https://github.com/Juvenal-Yescas/mediafire-dl <br/>
-https://github.com/iamleot/transferwee
