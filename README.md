@@ -4,7 +4,7 @@
 - Works on Windows & Linux
 - No API keys / credentials needed
 - Downloads from Google Drive, Dropbox, Mediafire, and WeTransfer
-- Automatically extracts and deletes zip/rar files
+- Automatically extracts and deletes .zip & .rar files
 
 ## Usage
 ```python3
