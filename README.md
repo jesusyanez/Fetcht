@@ -18,7 +18,7 @@ lootdl.grab('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads
 ```python3
 import lootdl
 
-download_list = [URL1, URL2, URL3]
+download_list = ['URL1', 'URL2', 'URL3']
 
 for url in download_list:
  lootdl.grab(url, './')
