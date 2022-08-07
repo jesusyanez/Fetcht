@@ -1,19 +1,29 @@
-# All-In-One (AIO) DL
-
+# LootDL
+Downloader from Google Drive, Dropbox, Mediafire, and WeTransfer
 - Python 3 
 - Works on all operating systems
 - No API keys / credentials needed
-- Downloads from Google Drive, Dropbox, Mediafire, and WeTransfer
-- Automatically extracts, then deletes .zip & .rar files
+- Auto extracts .zip & .rar files
+- Removes compressed files after extraction
 
 ## Usage
 ```python3
-import aiodl
+import lootdl
 
 # aiodl.download(url, download location)
-aiodl.download('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
+lootdl.grab('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
 ```
-Ensure the download location exists and ends with a "/" or it may cause issues. You can use "./" to download to the working directory.
+
+### Bulk Usage
+```python3
+import lootdl
+
+download_list = [URL1, URL2, URL3]
+
+for url in download_list:
+ lootdl.grab(url, './')
+```
+Ensure the download location exists and ends with a "/" or it may cause issues. You can use "./" to download to the folder LootDL is in.
 
 ## Download URL Formats
 ```txt
@@ -22,8 +32,10 @@ https://drive.google.com/drive/folders/...?usp=sharing
 https://drive.google.com/file/d/.../view?usp=sharing
 
 Dropbox
-https://www.dropbox.com/s/.../...?dl=0(1)
-https://www.dropbox.com/sh/.../...?dl=0(1)
+https://www.dropbox.com/s/.../...?dl=0
+https://www.dropbox.com/s/.../...?dl=1
+https://www.dropbox.com/sh/.../...?dl=0
+https://www.dropbox.com/sh/.../...?dl=1
 
 MediaFire
 https://www.mediafire.com/file/.../.../file
