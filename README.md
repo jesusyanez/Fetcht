@@ -3,7 +3,8 @@ Downloader from Google Drive, Dropbox, Mediafire, and WeTransfer
 - Python 3 
 - Works on all operating systems
 - NO API KEYS REQUIRED
-- Auto extracts .zip & .rar files
+- Auto extracts .zip files
+- Auto extracts .rar files (requires 7zip)
 - Removes compressed files after extraction
 
 ## Usage
