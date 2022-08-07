@@ -10,7 +10,7 @@ Downloader from Google Drive, Dropbox, Mediafire, and WeTransfer
 ```python3
 import lootdl
 
-# aiodl.download(url, download location)
+# lootdl.grab(url, downloads folder path)
 lootdl.grab('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
 ```
 
