@@ -9,4 +9,4 @@ URL5 = 'https://drive.google.com/file/d/11Qwdfj-5RacRROV3elBW712CS3vEo-53/view?u
 download_list = [URL1, URL2, URL3, URL4, URL5]
 
 for url in download_list:
- lootdl.grab(url, 'C:/Users/devbox/Desktop/drumkit-dl/drumkit-dl-gui/downloads/')
+ lootdl.grab(url, './')
