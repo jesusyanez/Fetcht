@@ -118,7 +118,7 @@ def wt_download(url, directory):
     wetransferdl.download(url, directory, extract=True)
 
 # Detects url cloud service type and downloads it to a specific location
-def download(url, output_path):
+def grab(url, output_path):
     if gdrive_url in url:
         gd_download(url, output_path)
     if dropbox_url in url:

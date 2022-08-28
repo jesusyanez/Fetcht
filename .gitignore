@@ -111,6 +111,9 @@ ENV/
 env.bak/
 venv.bak/
 
+downloads/
+clean_requests/
+
 # Spyder project settings
 .spyderproject
 .spyproject
