@@ -90,7 +90,7 @@ def db_download(url, directory):
     file_name = get_title(url)[:-21][10:]
     suffix1 = file_name.endswith(".zip")
     suffix2 = file_name.endswith(".rar")
-    if not suffix1 or not suffix2:
+    if not suffix1 and not suffix2:
         file_name = file_name + ".zip"
     dl_url = url[:-1] + '1'
     filepath = directory + file_name
