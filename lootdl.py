@@ -1,7 +1,7 @@
 # This file is an All-In-One module for downloading from cloud storage services
 # Supports share links from Google Drive, Dropbox, MediaFire, and WeTransfer
 # Does not use any APIs
-# Uses modified version of the following scripts:
+# Thank you to the authors of the following repos:
 #   "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
 #   "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
 #   "transferwee" by iamleot - https://github.com/iamleot/transferwee
@@ -9,6 +9,7 @@
 import gdrivedl
 import mediafiredl
 import wetransferdl
+import mediafire_request
 import os
 import requests
 import zipfile
@@ -31,16 +32,16 @@ def download_file(url, output_folder, filename):
     dl = gdrivedl.GDriveDL(quiet=False, overwrite=False, mtimes=False)
     dl.process_url(url, output_folder, filename)
 
-# Gets file/folder title by webscraping 
+# Gets file/folder title with requests
 def get_title(url):
     reqs = requests.get(url)
     soup = BeautifulSoup(reqs.text, 'html.parser')
     for title in soup.find_all('title'):
         return title.get_text()
 
-# Gets mediafire file/folder title by webscraping 
+# Gets mediafire file/folder title with requests
 def get_title_mf(url):
-    reqs = requests.get(url)
+    reqs = mediafire_request.get_mediafire(url)
     soup = BeautifulSoup(reqs.text, 'html.parser')
     temp_output = str(soup.find('div', {'class': 'filename'}).get_text())
     return temp_output
@@ -48,6 +49,7 @@ def get_title_mf(url):
 # Detects file compression type
 def compression_type(file_name):
     ext = os.path.splitext(file_name)[-1].lower()
+    print(ext)
     return ext
 
 # Uncompresses files and then deletes compressed folder
@@ -88,8 +90,11 @@ def gd_download(url, directory):
 def db_download(url, directory):
     url = url[:-1] + '0'
     file_name = get_title(url)[:-21][10:]
+    print(file_name)
     suffix1 = file_name.endswith(".zip")
     suffix2 = file_name.endswith(".rar")
+    print(suffix1)
+    print(suffix2)
     if not suffix1 and not suffix2:
         file_name = file_name + ".zip"
     dl_url = url[:-1] + '1'
@@ -106,7 +111,7 @@ def db_download(url, directory):
 
 # Download from MediaFire
 def mf_download(url, directory):
-    zip_name = url[:-5].rsplit('/', 1)[-1]
+    zip_name = get_title_mf(url)
     temp_output = directory + zip_name
     print('---> Downloading to: ' + temp_output)
     output = zip_name[:-4]
