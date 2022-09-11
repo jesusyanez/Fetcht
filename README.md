@@ -1,5 +1,5 @@
 # LootDL
-Downloader for Google Drive, Dropbox, Mediafire, and WeTransfer link
+Downloader for Google Drive, Dropbox, Mediafire, and WeTransfer links
 - Python 3 
 - Works on all operating systems
 - No API keys / credentials needed
