@@ -1,11 +1,17 @@
 # LootDL
+
+<img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
+
 Downloader for Google Drive, Dropbox, Mediafire, and WeTransfer links
+
 - Python 3 
 - Works on all operating systems
 - No API keys / credentials needed
 - Auto extracts .zip files
 - Auto extracts .rar files (requires 7zip)
 - Auto deletes compressed files after extraction
+
+
 
 ## Usage
 ```python3
