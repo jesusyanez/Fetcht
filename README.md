@@ -64,3 +64,9 @@ https://wetransfer.com/downloads/.../...
 - [X] WeTransfer
 - [ ] Mega
  
+ ## Acknowledgements 
+ 
+Thank you to the authors of the following repos:
+- "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
+- "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
+- "transferwee" by iamleot - https://github.com/iamleot/transferwee
