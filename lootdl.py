@@ -93,10 +93,6 @@ def db_download(url, directory):
     print(file_name)
     suffix1 = file_name.endswith(".zip")
     suffix2 = file_name.endswith(".rar")
-    print(suffix1)
-    print(suffix2)
-    if not suffix1 and not suffix2:
-        file_name = file_name + ".zip"
     dl_url = url[:-1] + '1'
     filepath = directory + file_name
     print("---> Downloading to: " + filepath)
@@ -107,7 +103,9 @@ def db_download(url, directory):
         for chunk in r.iter_content(chunk_size=1024): 
             if chunk:
                 f.write(chunk)
-    unzip(file_name, output, directory)
+    if suffix1 or suffix2:
+        unzip(file_name, output, directory)
+
 
 # Download from MediaFire
 def mf_download(url, directory):
