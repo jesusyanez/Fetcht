@@ -1,8 +1,9 @@
 # LootDL
 
+## API-less download library for <a href="https://www.google.com/drive/">Google Drive</a>, <a href="https://www.dropbox.com/">Dropbox</a>, <a href="https://www.mediafire.com/">MediaFire</a>, and <a href="https://wetransfer.com/">WeTransfer</a>.
+
 <img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
 
-Downloader for Google Drive, Dropbox, Mediafire, and WeTransfer.
 
 - Python 3 
 - Works on all operating systems
@@ -17,8 +18,10 @@ Downloader for Google Drive, Dropbox, Mediafire, and WeTransfer.
 ```python3
 import lootdl
 
-# lootdl.grab(url, downloads folder path)
-lootdl.grab('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads/')
+url = "https://drive.google.com/file/d/.../view?usp=sharing"
+download_path = "./Downloads/"
+
+lootdl.grab(url, download_path)
 ```
 
 ### Bulk Usage
@@ -26,14 +29,13 @@ lootdl.grab('https://drive.google.com/file/d/.../view?usp=sharing', './Downloads
 import lootdl
 
 download_list = ['URL1', 'URL2', 'URL3']
+download_path = "./"
 
 for url in download_list:
- lootdl.grab(url, './')
+ lootdl.grab(url, download_path)
 ```
-Ensure the download location exists and ends with a "/" or it may cause issues. <br/>
-You can use "./" to download to the folder LootDL is in.
 
-## Supported URLs
+## Supported URL Formats
 
 Google Drive
 ```txt
