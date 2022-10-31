@@ -2,6 +2,8 @@
 
 ## API-less download library for <a href="https://www.google.com/drive/">Google Drive</a>, <a href="https://www.dropbox.com/">Dropbox</a>, <a href="https://www.mediafire.com/">MediaFire</a>, and <a href="https://wetransfer.com/">WeTransfer</a>.
 
+#### 4 different providers, 1 library, 0 APIs
+
 <img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
 
 
@@ -28,8 +30,13 @@ lootdl.grab(url, download_path)
 ```python3
 import lootdl
 
-download_list = ['URL1', 'URL2', 'URL3']
-download_path = "./"
+url1 = "https://drive.google.com/file/d/.../view?usp=sharing"
+url2 = "https://www.dropbox.com/s/.../...?dl=0"
+url3 = "https://www.mediafire.com/file/.../.../file"
+url4 = "https://wetransfer.com/downloads/.../..."
+
+download_list = [url1, url2, url3, url4]
+download_path = "./Downloads/"
 
 for url in download_list:
  lootdl.grab(url, download_path)
