@@ -4,8 +4,6 @@
 
 #### 4 different providers, 1 library, 0 APIs
 
-<img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
-
 
 - Python 3 
 - Works on all operating systems
