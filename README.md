@@ -20,16 +20,6 @@
 ```python3
 import lootdl
 
-url = "https://drive.google.com/file/d/.../view?usp=sharing"
-download_path = "./Downloads/"
-
-lootdl.grab(url, download_path)
-```
-
-### Bulk Usage
-```python3
-import lootdl
-
 url1 = "https://drive.google.com/file/d/.../view?usp=sharing"
 url2 = "https://www.dropbox.com/s/.../...?dl=0"
 url3 = "https://www.mediafire.com/file/.../.../file"
