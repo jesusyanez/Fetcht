@@ -2,7 +2,7 @@
 
 ## An API-less downloader for <a href="https://www.google.com/drive/">Google Drive</a>, <a href="https://www.dropbox.com/">Dropbox</a>, <a href="https://www.mediafire.com/">MediaFire</a>, and <a href="https://wetransfer.com/">WeTransfer</a> links.
 
-#### <p><i>4 providers, 1 library, 0 APIs</i></p> 
+#### <p><i>1 function, 4 providers, 0 APIs</i></p> 
 
 
 - Python 3 
