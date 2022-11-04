@@ -1,8 +1,8 @@
 # LootDL
 
-## API-less download library for <a href="https://www.google.com/drive/">Google Drive</a>, <a href="https://www.dropbox.com/">Dropbox</a>, <a href="https://www.mediafire.com/">MediaFire</a>, and <a href="https://wetransfer.com/">WeTransfer</a> content.
+## An API-less downloader for <a href="https://www.google.com/drive/">Google Drive</a>, <a href="https://www.dropbox.com/">Dropbox</a>, <a href="https://www.mediafire.com/">MediaFire</a>, and <a href="https://wetransfer.com/">WeTransfer</a> links.
 
-#### 4 different providers, 1 library, 0 APIs
+#### <p><i>4 providers, 1 library, 0 APIs</i></p> 
 
 
 - Python 3 
@@ -10,7 +10,7 @@
 - No API keys / credentials needed
 - Auto extracts .zip files
 - Auto extracts .rar files (requires 7zip)
-- Auto deletes compressed files after extraction
+- Removes compressed files after extraction
 
 
 
@@ -61,9 +61,6 @@ https://wetransfer.com/downloads/.../...
 - [X] WeTransfer
 - [ ] Mega
  
- ## Acknowledgements 
+ ## Acknowledgement
  
-Thank you to the authors of the following repos:
-- "gdrivedl" by matthuisman - https://github.com/matthuisman/gdrivedl
-- "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
-- "transferwee" by iamleot - https://github.com/iamleot/transferwee
+Code was borrowed from <a href="https://github.com/matthuisman/gdrivedl">gdrivedl</a>, <a href="https://github.com/Juvenal-Yescas/mediafire-dl">mediafire-dl</a>, and <a href="https://github.com/iamleot/transferwee">transferwee</a> to create lootdl.
