@@ -1,4 +1,4 @@
-import lootdl
+import cdl
 
 URL1 = 'https://drive.google.com/file/d/10AobmWPeTkxSakayl_KMWyW49vWykfOv/view?usp=drivesdk'
 URL2 = 'https://drive.google.com/file/d/10qzS3QC4hd8ZooddDJAwjP1WZeLkJJE7/view'
@@ -9,4 +9,4 @@ URL5 = 'https://drive.google.com/file/d/11Qwdfj-5RacRROV3elBW712CS3vEo-53/view?u
 download_list = [URL1, URL2, URL3, URL4, URL5]
 
 for url in download_list:
- lootdl.grab(url, './')
+ cdl.grab(url, './')

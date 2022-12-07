@@ -6,7 +6,7 @@
 #   "mediafire-dl" by Juvenal-Yescas - https://github.com/Juvenal-Yescas/mediafire-dl
 #   "transferwee" by iamleot - https://github.com/iamleot/transferwee
 
-import gdrivedl
+import cdl_utils.gdrivedl as gdrivedl
 import mediafiredl
 import wetransferdl
 import mediafire_request

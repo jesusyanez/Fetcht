@@ -1,9 +1,8 @@
 # CDL
 
-#### <p><i>1 package, 4 providers, 0 APIs</i></p> 
+#### <p><i>1 package, 4 providers, 0 APIs</i></p>
 
-
-- Python 3 
+- Python 3
 - Works on all operating systems
 - No API keys / credentials needed
 - Auto extracts .zip files
@@ -29,8 +28,9 @@ https://wetransfer.com/downloads/.../...
 ```
 
 ## Usage
+
 ```python3
-import lootdl
+import cdl
 
 url1 = "https://drive.google.com/file/d/.../view?usp=sharing"
 url2 = "https://www.dropbox.com/s/.../...?dl=0"
@@ -44,16 +44,14 @@ for url in download_list:
  lootdl.grab(url, download_path)
 ```
 
-
-
-
 ## Roadmap
-- [X] Google Drive
-- [X] Dropbox
-- [X] MediaFire
-- [X] WeTransfer
+
+- [x] Google Drive
+- [x] Dropbox
+- [x] MediaFire
+- [x] WeTransfer
 - [ ] Mega
- 
- ## Acknowledgement
- 
+
+## Acknowledgement
+
 Code was borrowed from <a href="https://github.com/matthuisman/gdrivedl">gdrivedl</a>, <a href="https://github.com/Juvenal-Yescas/mediafire-dl">mediafire-dl</a>, and <a href="https://github.com/iamleot/transferwee">transferwee</a> to create lootdl.
