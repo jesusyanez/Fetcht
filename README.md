@@ -38,10 +38,10 @@ url3 = "https://www.mediafire.com/file/.../.../file"
 url4 = "https://wetransfer.com/downloads/.../..."
 
 download_list = [url1, url2, url3, url4]
-download_path = "./Downloads/"
+download_path = "./"
 
 for url in download_list:
- lootdl.grab(url, download_path)
+ cdl.grab(url, download_path)
 ```
 
 ## Roadmap
