@@ -32,12 +32,7 @@ https://wetransfer.com/downloads/.../...
 ```python3
 import cdl
 
-url1 = "https://drive.google.com/file/d/.../view?usp=sharing"
-url2 = "https://www.dropbox.com/s/.../...?dl=0"
-url3 = "https://www.mediafire.com/file/.../.../file"
-url4 = "https://wetransfer.com/downloads/.../..."
-
-download_list = [url1, url2, url3, url4]
+download_list = ["URL1", "URL2", "URL3"]
 download_path = "./"
 
 for url in download_list:
