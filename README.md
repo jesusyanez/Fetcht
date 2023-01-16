@@ -21,8 +21,10 @@ https://drive.google.com/file/d/example/view?usp=sharing
 
 ### Dropbox
 ```txt
-https://www.dropbox.com/s/example/example?dl=0(1)
-https://www.dropbox.com/sh/example/example?dl=0(1)
+https://www.dropbox.com/s/example/example?dl=0
+https://www.dropbox.com/sh/example/example?dl=0
+https://www.dropbox.com/s/example/example?dl=1
+https://www.dropbox.com/sh/example/example?dl=1
 ```
 ### MediaFire
 ```txt
