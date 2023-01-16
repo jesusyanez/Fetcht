@@ -2,6 +2,8 @@
 
 #### <p><i>1 package, 4 providers, 0 APIs</i></p>
 
+<img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
+
 - Python 3
 - Works on all operating systems
 - No API keys / credentials needed
