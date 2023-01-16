@@ -1,4 +1,4 @@
-# CDL
+# About
 
 #### <p><i>1 package, 4 providers, 0 APIs</i></p>
 
@@ -11,22 +11,26 @@
 - Auto extracts .rar files (requires 7zip)
 - Removes compressed files after extraction
 
-## Supported URLs
+## Supported providers & link formats
 
+### Google Drive
 ```txt
-# Google Drive
-https://drive.google.com/drive/folders/...?usp=sharing
-https://drive.google.com/file/d/.../view?usp=sharing
+https://drive.google.com/drive/folders/example?usp=sharing
+https://drive.google.com/file/d/example/view?usp=sharing
+```
 
-# Dropbox
-https://www.dropbox.com/s/.../...?dl=0(1)
-https://www.dropbox.com/sh/.../...?dl=0(1)
-
-# MediaFire
-https://www.mediafire.com/file/.../.../file
-
-# WeTransfer
-https://wetransfer.com/downloads/.../...
+### Dropbox
+```txt
+https://www.dropbox.com/s/example/example?dl=0(1)
+https://www.dropbox.com/sh/example/example?dl=0(1)
+```
+### MediaFire
+```txt
+https://www.mediafire.com/file/example/example/file
+```
+### WeTransfer
+```txt
+https://wetransfer.com/downloads/example/example
 ```
 
 ## Usage
@@ -34,8 +38,13 @@ https://wetransfer.com/downloads/.../...
 ```python3
 import cdl
 
-download_list = ["URL1", "URL2", "URL3"]
-download_path = "./"
+url1 = "https://drive.google.com/drive/folders/example?usp=sharing"
+url2 = "https://www.dropbox.com/s/example/example?dl=0(1)"
+url3 = "https://www.mediafire.com/file/example/example/file"
+url4 = "https://wetransfer.com/downloads/example/example"
+
+download_list = [url1, url2, url3, url4]
+download_path = "./downloads/" #make sure this directory already exists
 
 for url in download_list:
  cdl.grab(url, download_path)
