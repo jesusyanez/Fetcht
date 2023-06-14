@@ -6,10 +6,9 @@
 
 - Python 3
 - Works on all operating systems
-- No API keys / credentials needed
-- Auto extracts .zip files
-- Auto extracts .rar files (requires 7zip)
-- Removes compressed files after extraction
+- No APIs needed
+- Auto extracts .zip & .rar folders (rar requires 7zip) 
+- Removes all compressed files after extraction
 
 ## Supported providers & link formats
 
