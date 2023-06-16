@@ -1,8 +1,8 @@
-# About
+# Universal File Fetcher
 
-#### <p><i>1 package, 4 providers, 0 APIs</i></p>
+#### <p><i>Download from Google Drive, MediaFire, Dropbox, or WeTransfer.</i></p>
 
-<img src="https://github.com/jesusyanez/example-images/blob/main/downloader-example.gif?raw=true" />
+
 
 - Python 3
 - Works on all operating systems
@@ -10,7 +10,7 @@
 - Auto extracts .zip & .rar folders (rar requires 7zip) 
 - Removes all compressed files after extraction
 
-## Supported providers & link formats
+## Supported Link Formats
 
 ### Google Drive
 ```txt
