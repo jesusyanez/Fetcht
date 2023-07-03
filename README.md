@@ -1,62 +1,46 @@
-# Universal File Fetcher
+# Universal Cloud Fetcher
 
-#### <p><i>Fetch from cloud links.</i></p>
-#### <p><i>Supports Google Drive, MediaFire, Dropbox, or WeTransfer.</i></p>
+#### <p><i> Fetch from cloud storage share links.</i></p>
+#### <p><i>MediaFire | Google Drive | Dropbox | WeTransfer</i></p>
 
 
-- Python 3
-- Works on all operating systems
-- Does not require any API.
-- Automatically extracts, then deletes, zip/rar files. 
-
-## Supported Link Formats
-
-### Google Drive
-```txt
-https://drive.google.com/drive/folders/example?usp=sharing
-https://drive.google.com/file/d/example/view?usp=sharing
-```
-
-### Dropbox
-```txt
-https://www.dropbox.com/s/example/example?dl=0
-https://www.dropbox.com/sh/example/example?dl=0
-https://www.dropbox.com/s/example/example?dl=1
-https://www.dropbox.com/sh/example/example?dl=1
-```
-### MediaFire
-```txt
-https://www.mediafire.com/file/example/example/file
-```
-### WeTransfer
-```txt
-https://wetransfer.com/downloads/example/example
-```
+- Python 3.
+- Works on all operating systems.
 
 ## Usage
 
 ```python3
 import cdl
 
-url1 = "https://drive.google.com/drive/folders/example?usp=sharing"
-url2 = "https://www.dropbox.com/s/example/example?dl=0(1)"
-url3 = "https://www.mediafire.com/file/example/example/file"
-url4 = "https://wetransfer.com/downloads/example/example"
-
-download_list = [url1, url2, url3, url4]
-download_path = "./downloads/" #make sure this directory already exists
-
-for url in download_list:
- cdl.grab(url, download_path)
+cdl.grab(<URL>, <OUTPUT_FOLDER_PATH>)
 ```
 
-## Roadmap
+## Links
 
-- [x] Google Drive
-- [x] Dropbox
-- [x] MediaFire
-- [x] WeTransfer
-- [ ] Mega
+```txt
+Google Drive
+------------------------------------------------------------
+https://drive.google.com/drive/folders/example?usp=sharing
+https://drive.google.com/file/d/example/view?usp=sharing
+
+Dropbox
+------------------------------------------------------------
+https://www.dropbox.com/s/example/example?dl=0(1)
+https://www.dropbox.com/sh/example/example?dl=0(1)
+
+MediaFire
+------------------------------------------------------------
+https://www.mediafire.com/file/example/example/file
+
+WeTransfer
+------------------------------------------------------------
+https://wetransfer.com/downloads/example/example
+
+```
+
+## To-Do
+
+- [ ] Add Mega
 
 ## Acknowledgement
 
