@@ -1,11 +1,10 @@
-# Universal Cloud Fetcher
+# Cloud Fetcher Pro
 
-#### <p><i> Fetch from cloud storage share links.</i></p>
-#### <p><i>MediaFire | Google Drive | Dropbox | WeTransfer</i></p>
+#### <p><i> A tool that fetches all content from any Google Drive, MediaFire, Dropbox or WeTransfer share link.</i></p>
 
+Uses Python 3.
+Works on all operating systems. 
 
-- Python 3.
-- Works on all operating systems.
 
 ## Usage
 
