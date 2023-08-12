@@ -1,9 +1,12 @@
-# Cloud Fetcher Pro
+# LootDL
 
-#### <p><i> A tool that fetches all content from any Google Drive, MediaFire, Dropbox or WeTransfer share link.</i></p>
+#### <p> A cloud storage downloader.</p>
+<p> Google Drive | MediaFire | DropBox | WeTransfer</p>
 
-Uses Python 3.
-Works on all operating systems. 
+## Requirements
+- [Python 3](https://www.python.org/downloads/)
+- Windows or Linux
+- Downloads from share links.
 
 
 ## Usage
@@ -37,9 +40,6 @@ https://wetransfer.com/downloads/example/example
 
 ```
 
-## To-Do
-
-- [ ] Add Mega
 
 ## Acknowledgement
 
