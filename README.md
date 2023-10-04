@@ -1,7 +1,7 @@
-# LootDL
+# fileshare
 
-#### <p> A cloud storage downloader.</p>
-<p> Google Drive | MediaFire | DropBox | WeTransfer</p>
+### <p> Download from fileshare sites with Python.</p>
+<p> Works with Google Drive, MediaFire, DropBox, and WeTransfer.</p>
 
 ## Requirements
 - [Python 3](https://www.python.org/downloads/)
